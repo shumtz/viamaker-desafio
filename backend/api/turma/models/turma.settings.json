@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "turmas",
+  "info": {
+    "name": "turma",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "alunos": {
+      "collection": "alunos",
+      "via": "turma"
+    },
+    "escola": {
+      "model": "escola",
+      "via": "turmas"
+    }
+  }
+}

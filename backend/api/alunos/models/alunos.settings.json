@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alunos",
+  "info": {
+    "name": "Alunos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "escola": {
+      "via": "alunos",
+      "model": "escola"
+    },
+    "turma": {
+      "via": "alunos",
+      "model": "turma"
+    }
+  }
+}

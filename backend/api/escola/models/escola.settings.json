@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "escolas",
+  "info": {
+    "name": "escola",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "nome": {
+      "type": "string"
+    },
+    "cnpj": {
+      "type": "string"
+    },
+    "turmas": {
+      "via": "escola",
+      "collection": "turma"
+    },
+    "alunos": {
+      "collection": "alunos",
+      "via": "escola"
+    }
+  }
+}

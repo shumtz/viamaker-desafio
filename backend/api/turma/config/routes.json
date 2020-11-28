@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/turmas",
+      "handler": "turma.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/turmas/count",
+      "handler": "turma.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/turmas/:id",
+      "handler": "turma.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/turmas",
+      "handler": "turma.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/turmas/:id",
+      "handler": "turma.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/turmas/:id",
+      "handler": "turma.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
