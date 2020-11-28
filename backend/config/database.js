@@ -4,16 +4,16 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'mongoose',
       settings: {
-        host: env('DATABASE_HOST', '127.0.0.1'),
+        host: env('DATABASE_HOST', 'cluster0-shard-00-01.qm9cp.mongodb.net'),
         srv: env.bool('DATABASE_SRV', false),
         port: env.int('DATABASE_PORT', 27017),
-        database: env('DATABASE_NAME', 'backend'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', 'password'),
+        database: env('DATABASE_NAME', 'backend_test'),
+        username: env('DATABASE_USERNAME', 'test'),
+        password: env('DATABASE_PASSWORD', 'KwyykMD4vPWBigoq'),
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
-        ssl: env.bool('DATABASE_SSL', false),
+        ssl: env.bool('DATABASE_SSL', true),
       },
     },
   },

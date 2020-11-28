@@ -1,6 +1,7 @@
 <template>
   <v-content>
     <v-container>
+      <Back link="/students" />
       <v-card class="mx-auto" tile>
         <v-form>
           <v-text-field
@@ -32,6 +33,8 @@
 </template>
 
 <script>
+import Back from "@/components/back.vue";
+
 export default {
   data: () => ({
     name: "",
@@ -43,6 +46,9 @@ export default {
     clear() {
       (this.name = ""), (this.select = ""), (this.items = []);
     }
+  },
+  components: {
+    Back
   }
 };
 </script>

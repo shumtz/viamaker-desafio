@@ -1,11 +1,11 @@
 <template>
   <v-main>
     <v-container>
-      <Back />
+      <Back link="/" />
       <v-card class="mx-auto" tile>
         <v-card-title class="title">
           <h1>Alunos</h1>
-          <v-btn>Adicionar</v-btn>
+          <v-btn color="var(--green)">Adicionar</v-btn>
         </v-card-title>
         <v-simple-table>
           <thead>
@@ -23,7 +23,7 @@
               <th>{{ aluno.escola.nome }}</th>
               <th>{{ aluno.turma.nome }}</th>
               <router-link :to="`/edit/students/${aluno.id}`"
-                ><v-btn>Editar</v-btn></router-link
+                ><v-btn color="var(--green)">Editar</v-btn></router-link
               >
             </tr>
           </tbody>
@@ -58,6 +58,24 @@ export default {
   justify-content: space-between;
 }
 
+button {
+  color: #fff !important;
+}
+
+body
+  > main
+  > div
+  > div
+  > div
+  > div.v-data-table.theme--light
+  > div
+  > table
+  > tbody
+  > tr
+  > a
+  > button {
+  width: 100%;
+}
 tr {
   font-size: 40px;
 }

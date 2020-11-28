@@ -14,19 +14,16 @@ export default new Vuex.Store({
     async getAlunos({ commit }) {
       const response = await axios("http://127.0.0.1:1337/alunos");
       const data = await response.data;
-      console.log(data);
       commit("SET_ALUNOS", data);
     },
     async getEscolas({ commit }) {
       const response = await axios("http://127.0.0.1:1337/escolas");
       const data = await response.data;
-      console.log(data);
       commit("SET_ESCOLAS", data);
     },
     async getTurmas({ commit }) {
       const response = await axios("http://127.0.0.1:1337/turmas");
       const data = await response.data;
-      console.log(data);
       commit("SET_TURMAS", data);
     }
   },
