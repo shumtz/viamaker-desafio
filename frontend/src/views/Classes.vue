@@ -1,11 +1,11 @@
 <template>
   <v-main>
     <v-container>
-      <Back link="/" />
+      <Button color="var(--red)" name="Voltar" link="/" />
       <v-card class="mx-auto" tile>
         <v-card-title class="title">
           <h1>Turmas</h1>
-          <v-btn color="var(--green)">Adicionar</v-btn>
+          <Button color="var(--green)" name="Adicionar" link="/" />
         </v-card-title>
         <v-simple-table>
           <thead>
@@ -18,9 +18,16 @@
             <tr v-for="turma in turmas" :key="turma.id">
               <th>{{ turma.id }}</th>
               <th>{{ turma.nome }}</th>
-              <router-link :to="`/edit/classes/${turma.id}`"
-                ><v-btn color="var(--green)">Editar</v-btn></router-link
-              >
+              <Button
+                color="var(--green)"
+                name="Editar"
+                :link="`/edit/classes/${turma.id}`"
+              />
+              <Button
+                color="var(--green)"
+                name="Ver"
+                :link="`/view/${turma.id}`"
+              />
             </tr>
           </tbody>
         </v-simple-table>
@@ -30,7 +37,7 @@
 </template>
 
 <script>
-import Back from "@/components/back.vue";
+import Button from "@/components/buttons/button.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -40,15 +47,12 @@ export default {
   },
   computed: mapState(["turmas"]),
   components: {
-    Back
+    Button
   }
 };
 </script>
 
 <style scoped>
-.v-card {
-  padding: 20px;
-}
 .title {
   display: flex;
   justify-content: space-between;
@@ -56,23 +60,5 @@ export default {
 
 tr {
   font-size: 40px;
-}
-
-button {
-  color: #fff !important;
-}
-body
-  > main
-  > div
-  > div
-  > div
-  > div.v-data-table.theme--light
-  > div
-  > table
-  > tbody
-  > tr
-  > a
-  > button {
-  width: 100%;
 }
 </style>

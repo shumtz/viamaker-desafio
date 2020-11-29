@@ -1,14 +1,14 @@
 # Leia o readme
 
+Toda documentação do projeto está em suas respectivas pastas (frontend e backend).
 
-## Explicações
+## Observações
 
 Primeiramente, obrigado Alexandre pela oportunidade. Eu fiz o backend usando um CMS pois você disse que iria ter uma vaga para frontend, então eu acabei fazendo com CMS para poder ser mais rapido no desenvolvimento. Tudo bem me retirar por causa disso, no readme do Github nao diz nada sobre fazer uma API do zero, como está descrito "Desafio VUE", então eu usei StrapiJS com MongoDB.
 
 Felizmente eu sou Junior, então provavelmente tenha alguma forma melhor de se fazer algumas paginas, dinamicas é uma delas. Atualmente eu tenho trabalhado mais com React do que Vue em si, apesar de já ter dado bastante manuntenção em sistema com Vue.js, tentei usar tudo que sabia, mas provavelmente não foi suficiente.
 
-Eu tentei dar meu melhor usando Vue, mas infelizmente não consegui terminar á tempo. Agradeco novamente essa oportunidade de tentar entregar algo desse nivel em um tempo curto, foi bem bacana a experiencia, aprendi bastante coisa nova tentando integrar o sistema. Obrigado!
-
+Eu tentei usar tudo que sabia pra poder finalizar o sistema, mas infelizmente eu acabei extrapolando no teste... acabei falando que em 5 dias terminaria mas na verdade era um pouco mais complexo do que eu imaginei... mesmo tendo virado a noite codando eu acabei apagando o projeto duas vezes, por motivos de falta de estrutura. Eu agradeço novamente pela oportunidade, me ensinou algumas coisas importantes no vue que eu nunca tinha usado/feito. Infelizmente eu tive problemas com a API e por causa disso não consegui finalizar 100%.
 
 ### Paginas
 - [x] Escolas, Estudantes e Classes
@@ -22,7 +22,7 @@ Eu tentei dar meu melhor usando Vue, mas infelizmente não consegui terminar á 
 - [x] Listar Dados
 - [ ] Edição de Dados
 - [ ] Apagar Dados
-- [ ] Criar Dado
+- [ ] Criar Dados
 
 ## Usados
 

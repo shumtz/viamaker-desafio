@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "Button",
   props: {
     text: String,
     icon: String

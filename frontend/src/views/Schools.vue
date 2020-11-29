@@ -1,11 +1,11 @@
 <template>
   <v-main>
     <v-container>
-      <Back link="/" />
+      <Button color="var(--red)" name="Voltar" link="/" />
       <v-card class="mx-auto" tile>
         <v-card-title class="title">
           <h1>Escolas</h1>
-          <v-btn color="var(--green)">Adicionar</v-btn>
+          <Button color="var(--green)" name="Adicionar" link="/" />
         </v-card-title>
         <v-simple-table>
           <thead>
@@ -20,12 +20,16 @@
               <th>{{ escola.id }}</th>
               <th>{{ escola.nome }}</th>
               <th>{{ escola.cnpj }}</th>
-              <router-link :to="`/edit/schools/${escola.id}`"
-                ><v-btn color="var(--green)">Editar</v-btn></router-link
-              >
-              <router-link :to="`/view/${escola.id}`">
-                <v-btn color="var(--green)">Ver</v-btn>
-              </router-link>
+              <Button
+                color="var(--green)"
+                name="Editar"
+                :link="`/edit/schools/${escola.id}`"
+              />
+              <Button
+                color="var(--green)"
+                name="Ver"
+                :link="`/view/${escola.id}`"
+              />
             </tr>
           </tbody>
         </v-simple-table>
@@ -35,7 +39,7 @@
 </template>
 
 <script>
-import Back from "@/components/back.vue";
+import Button from "@/components/buttons/button.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -45,22 +49,15 @@ export default {
   },
   computed: mapState(["escolas"]),
   components: {
-    Back
+    Button
   }
 };
 </script>
 
 <style scoped>
-.v-card {
-  padding: 20px;
-}
 .title {
   display: flex;
   justify-content: space-between;
-}
-
-button {
-  color: #fff !important;
 }
 
 body

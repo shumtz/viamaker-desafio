@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-main>
     <img src="@/assets/viamaker-branco.png" />
     <h3>Dashboard</h3>
     <v-container class="center">
@@ -13,11 +13,11 @@
         <Button icon="mdi-home" text="Turmas" />
       </router-link>
     </v-container>
-  </v-content>
+  </v-main>
 </template>
 
 <script>
-import Button from "@/components/button.vue";
+import Button from "@/components/buttons/buttonIcon.vue";
 
 export default {
   name: "Home",

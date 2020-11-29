@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: "/edit/students/:name",
-    name: "Edit",
+    name: "EditStudents",
     component: studentsEdit
   },
   {
@@ -35,7 +35,7 @@ const routes = [
   },
   {
     path: "/edit/schools/:name",
-    name: "Edit",
+    name: "EditSchools",
     component: schoolsEdit
   },
   {
@@ -45,7 +45,7 @@ const routes = [
   },
   {
     path: "/edit/classes/:name",
-    name: "Edit",
+    name: "EditClasses",
     component: classesEdit
   },
   {

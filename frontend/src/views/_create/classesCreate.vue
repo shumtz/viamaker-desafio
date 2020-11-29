@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container>
-      <Button color="var(--red)" name="Voltar" link="/classes" />
+      <Back link="/classes" />
       <v-card class="mx-auto" tile>
         <v-form>
           <v-text-field
@@ -9,6 +9,15 @@
             label="Nome da turma"
             required
           ></v-text-field>
+          <v-combobox
+            dense
+            multiple
+            small-chips
+            v-model="select"
+            :items="items"
+            label="Combobox"
+            outlined
+          ></v-combobox>
           <v-btn>Cadastrar</v-btn>
           <v-btn @click="clear">Apagar</v-btn>
         </v-form>
@@ -18,7 +27,7 @@
 </template>
 
 <script>
-import Button from "@/components/buttons/button.vue";
+import Back from "@/components/buttons/back.vue";
 import { mapState } from "vuex";
 
 export default {
@@ -28,17 +37,18 @@ export default {
     items: ["Programming", "Design", "Vue", "Vuetify"]
   }),
   name: "Classes",
-  methods: {
-    clear() {
-      this.name = "";
-    }
-  },
   mounted() {
     this.$store.dispatch("getTurmas");
   },
   computed: mapState(["classes"]),
   components: {
-    Button
+    Back
   }
 };
 </script>
+
+<style scoped>
+.v-card {
+  padding: 20px;
+}
+</style>

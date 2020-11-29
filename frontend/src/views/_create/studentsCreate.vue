@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container>
-      <Button color="var(--red)" name="Voltar" link="/students" />
+      <Back link="/students" />
       <v-card class="mx-auto" tile>
         <v-form>
           <v-text-field
@@ -9,6 +9,21 @@
             label="Nome do Aluno"
             required
           ></v-text-field>
+          <v-select
+            v-model="select"
+            :items="items"
+            label="Turma"
+            data-vv-name="turma"
+            required
+          ></v-select>
+          <v-select
+            v-model="select"
+            :items="items"
+            label="Escola"
+            data-vv-name="Escola"
+            required
+          >
+          </v-select>
           <v-btn>Cadastrar</v-btn>
           <v-btn @click="clear">Apagar</v-btn>
         </v-form>
@@ -18,7 +33,7 @@
 </template>
 
 <script>
-import Button from "@/components/buttons/button.vue";
+import Back from "@/components/buttons/back.vue";
 
 export default {
   data: () => ({
@@ -33,7 +48,13 @@ export default {
     }
   },
   components: {
-    Button
+    Back
   }
 };
 </script>
+
+<style scoped>
+.v-card {
+  padding: 20px;
+}
+</style>

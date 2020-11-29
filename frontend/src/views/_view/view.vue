@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container>
-      <Back />
+      <Button color="var(--red)" name="Voltar" link="/" />
       <v-card class="mx-auto" tile>
         <v-card-title class="title">
           <h1>Escola</h1>
@@ -26,7 +26,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Back from "@/components/back.vue";
+import Button from "@/components/buttons/button.vue";
 
 export default {
   name: "View",
@@ -35,15 +35,12 @@ export default {
   },
   computed: mapState(["alunos"]),
   components: {
-    Back
+    Button
   }
 };
 </script>
 
 <style scoped>
-.v-card {
-  padding: 20px;
-}
 .title {
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 <template>
-  <v-content>
+  <v-main>
     <v-container>
-      <Back link="/schools" />
+      <Button color="var(--red)" name="Voltar" link="/schools" />
       <v-card class="mx-auto" tile>
         <v-form>
           <v-text-field
@@ -9,38 +9,31 @@
             label="Nome da Escola"
             required
           ></v-text-field>
-          <v-text-field v-model="name" label="Cnpj" required></v-text-field>
+          <v-text-field v-model="cnpj" label="Cnpj" required></v-text-field>
           <v-btn>Cadastrar</v-btn>
           <v-btn @click="clear">Apagar</v-btn>
         </v-form>
       </v-card>
     </v-container>
-  </v-content>
+  </v-main>
 </template>
 
 <script>
-import Back from "@/components/back.vue";
+import Button from "@/components/buttons/button.vue";
 
 export default {
   data: () => ({
     name: "",
-    select: "",
-    items: ["Foo", "Bar", "Fizz", "Buzz"]
+    cnpj: ""
   }),
   name: "Students",
   methods: {
     clear() {
-      (this.name = ""), (this.select = ""), (this.items = []);
+      (this.name = ""), (this.cnpj = "");
     }
   },
   components: {
-    Back
+    Button
   }
 };
 </script>
-
-<style scoped>
-.v-card {
-  padding: 20px;
-}
-</style>
